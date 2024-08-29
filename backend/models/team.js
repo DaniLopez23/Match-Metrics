@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const teamSchema = new mongoose.Schema({
   name: String,
   city: String,
-  category: String,
+  division: String,
   players: [
     {
       type: mongoose.Schema.Types.ObjectId,
@@ -16,6 +16,7 @@ const teamSchema = new mongoose.Schema({
       ref: "Match",
     },
   ],
+  fav: Boolean,
 });
 
 teamSchema.set("toJSON", {

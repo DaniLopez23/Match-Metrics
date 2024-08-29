@@ -32,9 +32,9 @@ const HomeNavBar = () => {
             <Link to="/match">partidos</Link>
           </NavItem>
           <NavItem>
-            <NavLink href="https://github.com/reactstrap/reactstrap">
-              GitHub
-            </NavLink>
+          <NavItem>
+            <Link to="/players">jugadores</Link>
+          </NavItem>
           </NavItem>
           <UncontrolledDropdown nav inNavbar>
             <DropdownToggle nav caret>

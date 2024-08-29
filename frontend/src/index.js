@@ -4,11 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { configureStore } from '@reduxjs/toolkit'
+import { Provider } from 'react-redux'
+import teamReducer from './reducers/teamReducer'
+
+const store = configureStore({
+  reducer: {
+    team: teamReducer
+  }
+})
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 

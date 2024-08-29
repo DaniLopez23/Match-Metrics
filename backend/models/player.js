@@ -1,19 +1,13 @@
 const mongoose = require("mongoose");
 
-const posiblePositions = {
-  "goalkeeper": "GK",
-  "defender": "DEF",
-  "midfielder": "MID",
-  "forward": "FW"
-}
+
 
 const playerSchema = new mongoose.Schema({
   name: String,
   age: Number,
-  position: {
-    type: String,
-    enum: Object.values(posiblePositions)
-  },
+  weight: Number,
+  height: Number,
+  position: String,
   team: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Team'
